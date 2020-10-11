@@ -1,12 +1,40 @@
+/*ヘッダー*/
+
+/*ヘッダー全体*/
 .l-header {
     display: flex;
-    justify-content: space-between;
+	justify-content: space-between;
+	height: 70px;
 }
 
-.c-header--wrapper {
+/*ヘッダーロゴ周辺*/
+.c-header__wrapper {
     display: flex;
 }
 
-.p-nav--inner {
+/*ナビゲーションバー*/
+.p-nav__inner {
     display: flex;
+}
+
+.c-nav--beginners, .c-nav--course, .c-nav--graduates ,.c-nav--support, .c-nav--apply {
+	padding: 30px 15px;
+}
+
+/*ドロップダウンメニュー*/
+.c-nav--beginners, .c-nav--course, .c-nav--support {
+	position: relative;
+}
+
+/*ドロップダウンメニューの子要素*/
+.p-nav li > ul > li {
+	height: 0;
+	overflow: hidden;
+	transition: .5s;
+}
+
+/*ドロップダウンメニューの子要素(ホバー時)*/
+.p-nav li:hover > ul > li {
+	height: 70px;
+	overflow: visible;
 }
