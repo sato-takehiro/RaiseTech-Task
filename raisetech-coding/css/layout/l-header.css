@@ -5,20 +5,42 @@
     display: flex;
 	justify-content: space-between;
 	height: 70px;
+	background-color: #fff;
 }
 
-/*ヘッダーロゴ周辺*/
-.c-header__wrapper {
-    display: flex;
+/*ヘッダーロゴ周辺のリンクタグ*/
+.c-header__wrapper > a {
+	display: flex;
+	align-items: center;
+	padding-top: 15px;
+}
+
+/*ヘッダーロゴ*/
+.c-header-logo {
+	padding-left: 21px;
+}
+
+/*ヘッダー文*/
+.c-header-txt {
+	padding-left: 15px;
+	font-size: 14px;
+}
+
+/*ヘッダー文の中の強調*/
+.c-header-txt > strong {
+	font-size: 16px;
 }
 
 /*ナビゲーションバー*/
 .p-nav__inner {
-    display: flex;
+	display: flex;
+	align-items: baseline;
+	font-size: 16px;
 }
 
-.c-nav--beginners, .c-nav--course, .c-nav--graduates ,.c-nav--support, .c-nav--apply {
-	padding: 30px 15px;
+/*メニュー(ホバー時)の中にあるリンクタグ*/
+.p-nav > ul > li:nth-child(-n+4):hover > a {
+	background-color: #D4F1F8;
 }
 
 /*ドロップダウンメニュー*/
@@ -26,15 +48,60 @@
 	position: relative;
 }
 
+/*メニュー（受講お申込み）の中にあるリンクタグ*/
+.c-nav--apply > a {
+	background-color: #2498B3;
+	color: #fff;
+}
+
+/*ドロップダウンメニュー*/
+.p-nav > ul > li {
+	height: 70px
+	transition: .5s;
+}
+
+/*ドロップダウンメニューのリンクタグ*/
+.p-nav ul > li > a {
+	display: block;
+	padding: 27px 15px;
+}
+
+/*ドロップダウンメニューの子要素全体*/
+.p-nav li > ul {
+	position: absolute;
+	top: 70px;
+	left: 0px;
+}
+
 /*ドロップダウンメニューの子要素*/
 .p-nav li > ul > li {
 	height: 0;
 	overflow: hidden;
+	transition: .3s;
+}
+
+/*ドロップダウンメニュー(ホバー時)の子要素*/
+.p-nav li:hover > ul > li {
+	height: 50px;
+	overflow: visible;
+	word-break: keep-all;
+}
+
+/*ドロップダウンメニュー(ホバー時)の子要素の中にあるリンクタグ*/
+.p-nav li:hover > ul > li > a {
+	background-color: #cdeff7;
+	padding-right: 50px;
+	padding-top: 18px;
+	padding-bottom: 16px;
+}
+
+/*ドロップダウンメニューの子要素(ホバー時)の中にあるリンクタグ*/
+.p-nav li > ul  a {
+	color: #4a546a;
 	transition: .5s;
 }
 
-/*ドロップダウンメニューの子要素(ホバー時)*/
-.p-nav li:hover > ul > li {
-	height: 70px;
-	overflow: visible;
+.p-nav li:hover > ul > li:hover > a {
+	color: #22C1D7;
+	background-color: #fff;
 }

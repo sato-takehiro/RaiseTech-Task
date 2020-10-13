@@ -1,3 +1,10 @@
 * {
-    text-decoration: none;
+	text-decoration: none;
+	font: #131D34;
+	font-family: 'Noto Sans JP',MyYuGothicM,YuGothic,-apple-system,BlinkMacSystemFont,"Hiragino kaku Gothic ProN",Meiryo,Verdana,arial,helvetica,sans-serif;
+	line-height: 17px;
+}
+
+a:visited {
+	color: #131D34;
 }
