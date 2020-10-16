@@ -6,6 +6,8 @@
 	justify-content: space-between;
 	height: 70px;
 	background-color: #fff;
+	position: fixed;
+	width: 100%;
 }
 
 /*ヘッダーロゴ周辺のリンクタグ*/
