@@ -53,6 +53,51 @@
 	font-size: 18px;
 }
 
+/*トップページの下の部分をteachとする。
+	teach全体*/
 .teach {
+	display: flex;
+	justify-content: center;
+	background-color: #121212;
+	margin-top: 0;
+}
 
+/*teach内の3つの部分の各１つの設定*/
+.p-teach {
+	padding-right: 50px;
+	padding-left: 50px;
+	margin: 0;
+	margin-top: -200px;
+}
+
+/*teachの中のアイコンのラッパー*/
+.p-teach--icon {
+	border: solid 5px;
+	border-radius: 50%;
+	width: 230px;
+	height: 230px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+}
+
+/*teachの中のアイコン*/
+.p-teach--icon > i {
+	font-size: 7rem;
+}
+
+/*teachの中の見出し*/
+.c-teach--ttl {
+	text-align: center;
+	font-size: 24px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	color: #fff;
+}
+/*teachの中の文章*/
+.c-teach--txt {
+	text-align: left;
+	font-size: 16px;
+	color: #fff;
 }
