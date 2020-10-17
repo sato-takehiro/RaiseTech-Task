@@ -7,6 +7,7 @@
 	height: 70px;
 	background-color: #fff;
 	position: fixed;
+	z-index: 1000;
 	width: 100%;
 }
 
@@ -18,22 +19,95 @@
 }
 
 /*ヘッダーロゴ*/
-.c-header-logo {
+.c-header--logo {
 	padding-left: 21px;
 }
 
 /*ヘッダー文*/
-.c-header-txt {
+.c-header--txt {
 	padding-left: 15px;
 	font-size: 14px;
 }
 
 /*ヘッダー文の中の強調*/
-.c-header-txt > strong {
+.c-header--txt > strong {
 	font-size: 16px;
 }
 
-/*ナビゲーションバー*/
+/*ここからハンバーガーメニュー*/
+.hamburger-menu {
+	display: none;
+}
+
+:root {
+	--hamburger-menu-size: 100px; /* メニューの大きさ */
+	--hamburger-menu-padding: 15px;
+	--hamburger-menu-border-px: 2px; /* 線の太さ */
+	--hamburger-menu-border-color: #2498B3; /* 線の色 */
+	--hamburger-menu-transition: 0.3s; /* アニメーション秒数 */
+  }
+
+  :root .hamburger-menu-active > .hamburger-menu-line {
+	--hamburger-menu-border-color: #fff;
+  }
+
+  .hamburger-menu {
+	cursor: pointer;
+	position: relative;
+	width: 53px;
+	height: 50px;
+	background-color: #fff;
+  }
+
+  .hamburger-menu-active {
+	background-color: #2498B3;
+  }
+
+
+  .hamburger-menu-line {
+	position: absolute;
+	transition: var(--hamburger-menu-transition);
+	width: calc(100% - var(--hamburger-menu-padding) * 2);
+	height: var(--hamburger-menu-border-px);
+	background-color: var(--hamburger-menu-border-color);
+  }
+
+  .line-top {
+	top: var(--hamburger-menu-padding);
+	left: var(--hamburger-menu-padding);
+  }
+
+  .line-middle {
+	top: calc(50% - var(--hamburger-menu-border-px)/2);
+	left: var(--hamburger-menu-padding);
+  }
+
+  .line-bottom {
+	bottom: var(--hamburger-menu-padding);
+	left: var(--hamburger-menu-padding);
+  }
+
+
+  .hamburger-menu-active > .line-top {
+	top: calc(50% - var(--hamburger-menu-border-px)/2);
+	transform: rotate(45deg);
+
+  }
+
+  .hamburger-menu-active > .line-middle {
+	width: 0;
+	height: 0;
+	left: var(--hamburger-menu-padding);
+  }
+
+  .hamburger-menu-active > .line-bottom {
+	top: calc(50% - var(--hamburger-menu-border-px)/2);
+	transform: rotate(-45deg);
+  }
+
+  /* ここまでがハンバーガーメニュー */
+
+  /*ナビゲーションバー*/
 .p-nav__inner {
 	display: flex;
 	align-items: baseline;
@@ -106,4 +180,43 @@
 .p-nav li:hover > ul > li:hover > a {
 	color: #22C1D7;
 	background-color: #fff;
+}
+
+/*メディアクエリ（タブレット）*/
+@media screen and (max-width:1190px) {
+
+	/*ヘッダー全体*/
+	.l-header {
+		height: 50px;
+	}
+
+	/*ヘッダー文*/
+	.c-header--txt {
+		display: none;
+	}
+
+	/*ヘッダーロゴ*/
+	.c-header--logo {
+		padding-left: 10px;
+	}
+
+	/*ヘッダーロゴの画像部分*/
+	.c-header--logo > img {
+		height: 30px;
+	}
+
+	/*ヘッダーロゴ周辺のリンクタグ*/
+	.c-header__wrapper > a {
+		padding-top: 10px;
+	}
+
+	/*ハンバーガーメニューの実装部分*/
+	.hamburger-menu {
+		display: block;
+	}
+
+	/*ナビゲーションバー*/
+	.p-nav {
+		display: none;
+	}
 }

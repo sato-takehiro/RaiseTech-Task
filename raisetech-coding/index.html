@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet"><!-- googlefont -->
 	<link rel="stylesheet" type="text/css" href="css/foundation/reset.css"><!-- リセットCSS -->
-    <link rel="stylesheet" type="text/css" href="css/foundation/base.css"><!-- base.css -->
+	<link rel="stylesheet" type="text/css" href="css/foundation/base.css"><!-- base.css -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<script src="js/l-header.js"></script> <!-- l-header.js -->
 	<link rel="stylesheet" type="text/css" href="css/layout/l-header.css"><!-- l-header.css -->
 	<link rel="stylesheet" type="text/css" href="css/layout/l-main.css"><!-- l-main.css -->
 	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"><!-- fontawsome CDN -->
@@ -15,9 +17,14 @@
     <header class="l-header">
 	  <div class="c-header__wrapper">
 		<a href="#">
-          <h1 class="c-header-logo"><img src="img/header-logo.svg" alt="ヘッダーロゴ"></h1>
-		  <p class="c-header-txt">最速で<strong>「稼げる」</strong>プロになる<br>エンジニアリングスクール</p>
+          <h1 class="c-header--logo"><img src="img/header-logo.svg" alt="ヘッダーロゴ"></h1>
+		  <p class="c-header--txt">最速で<strong>「稼げる」</strong>プロになる<br>エンジニアリングスクール</p>
 		</a>
+	  </div>
+	  <div class="hamburger-menu">
+		<div class="hamburger-menu-line line-top"></div>
+		<div class="hamburger-menu-line line-middle"></div>
+		<div class="hamburger-menu-line line-bottom"></div>
 	  </div>
       <nav class="p-nav">
           <ul class="p-nav__inner">
@@ -51,13 +58,17 @@
     </header>
     <article class="top">
         <section class="c-hero"><!-- トップページの画像部分 -->
-			<div class="c-hero__inner"><!-- トップページのボタン部分 -->
-				<img src="img/header-logo.svg" class="c-hero--img" alt="ヘッダーロゴ">
-				<p class="c-hero--txt">はじめまして。RaiseTech（レイズテック）は<br>
-					最速で「稼げる」エンジニアになるための、<br>
-					実践的なWebエンジニアリングスクールです
-				</p>
-				<p class="c-hero--btn"><a href="#">マンガでわかるRaiseTech</a></p>
+			<div class="c-hero--img__inner2">
+				<div class="c-hero--img__inner">
+					<div class="c-hero__inner"><!-- トップページのボタン部分 -->
+						<img src="img/header-logo.svg" class="c-hero--img" alt="ヘッダーロゴ">
+						<p class="c-hero--txt">はじめまして。RaiseTech（レイズテック）は<br>
+							最速で「稼げる」エンジニアになるための、<br>
+							実践的なWebエンジニアリングスクールです
+						</p>
+						<p class="c-hero--btn"><a href="#">マンガでわかるRaiseTech</a></p>
+					</div>
+				</div>
 			</div>
 		</section><!-- 3つの円の所 -->
         <section class="teach">

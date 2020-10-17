@@ -1,17 +1,36 @@
 /*コンテンツエリア（ヒーローページ）*/
 .top {
-	padding-top: 70px;
+	padding-top: 50px;
 	height: 100%;
 }
 
 /*トップページの画像部分*/
 .c-hero {
 	background-image: url("../../img/bg-hero1.png");
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
 	height: 100%;
+}
+
+/*トップページのボタン部分のラッパーのラッパー*/
+.c-hero--img__inner2 {
+	background-image: url("../../img/bg-hero2.png");
+	background-repeat: no-repeat;
+	background-position: center 95%;
+	height: 100%;
+}
+
+/*トップページのボタン部分のラッパー*/
+.c-hero--img__inner {
+	background-image: url("../../img/bg-hero3.png");
+	background-repeat: no-repeat;
+	background-position: center 95%;
 	display: flex;
+	z-index: 200;
 	justify-content: center;
 	align-items: center;
-	padding-bottom: 250px;
+	height: 100%;
 }
 
 /*トップページのボタン部分*/
@@ -19,7 +38,9 @@
 	background-color: #fff;
 	border-radius: 10px;
 	width: 415px;
+	height:325px;
 	text-align: center;
+	margin-top: -235px;
 }
 
 /*トップページのボタン部分の中*/
@@ -38,6 +59,7 @@
 .c-hero--txt {
 	font-size: 16px;
 	padding-bottom: 5px;
+	line-height: 25.6px;
 }
 
 /*トップページのボタン部分の中ボタンのラッパー*/
@@ -48,8 +70,8 @@
 .c-hero--btn > a {
 	color: #fff;
 	background-color: #2498b3;
-	padding: 20px 30px;
-	border-radius: 10px;
+	padding: 20px 40px;
+	border-radius: 3px;
 	font-size: 18px;
 }
 
@@ -59,7 +81,7 @@
 	display: flex;
 	justify-content: center;
 	background-color: #121212;
-	margin-top: 0;
+	margin-top: -70px;
 	padding-bottom: 60px;
 }
 
@@ -92,7 +114,7 @@
 .c-teach--ttl {
 	text-align: center;
 	font-size: 24px;
-	padding-top: 10px;
+	padding-top: 15px;
 	padding-bottom: 20px;
 	color: #fff;
 }
@@ -101,4 +123,9 @@
 	text-align: left;
 	font-size: 16px;
 	color: #fff;
+}
+
+/*メディアクエリ（タブレット）*/
+@media screen and (max-width:1190px) {
+
 }
