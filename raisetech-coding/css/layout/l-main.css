@@ -1,0 +1,58 @@
+/*コンテンツエリア（ヒーローページ）*/
+.top {
+	padding-top: 70px;
+	height: 100%;
+}
+
+/*トップページの画像部分*/
+.c-hero {
+	background-image: url("../../img/bg-hero1.png");
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 250px;
+}
+
+/*トップページのボタン部分*/
+.c-hero__inner {
+	background-color: #fff;
+	border-radius: 10px;
+	width: 415px;
+	text-align: center;
+}
+
+/*トップページのボタン部分の中*/
+.c-hero--img, .c-hero--txt, .c-hero--btn {
+	margin: 0 auto; /*子要素を中央寄せにする*/
+}
+
+/*トップページのボタン部分の中の画像*/
+.c-hero--img {
+	padding-top: 43px;
+	padding-bottom: 20px;
+	width: 280px;
+}
+
+/*トップページのボタン部分の中の文章*/
+.c-hero--txt {
+	font-size: 16px;
+	padding-bottom: 5px;
+}
+
+/*トップページのボタン部分の中ボタンのラッパー*/
+.c-hero--btn {
+	padding: 50px 0;
+}
+/*トップページのボタン部分の中のボタン*/
+.c-hero--btn > a {
+	color: #fff;
+	background-color: #2498b3;
+	padding: 20px 30px;
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+.teach {
+
+}

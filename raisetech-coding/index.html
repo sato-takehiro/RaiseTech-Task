@@ -6,7 +6,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet"><!-- googlefont -->
 	<link rel="stylesheet" type="text/css" href="css/foundation/reset.css"><!-- リセットCSS -->
     <link rel="stylesheet" type="text/css" href="css/foundation/base.css"><!-- base.css -->
-    <link rel="stylesheet" type="text/css" href="css/layout/l-header.css"><!-- l-header.css -->
+	<link rel="stylesheet" type="text/css" href="css/layout/l-header.css"><!-- l-header.css -->
+	<link rel="stylesheet" type="text/css" href="css/layout/l-main.css"><!-- l-main.css -->
     <title>Document</title>
 </head>
 <body>
@@ -48,14 +49,16 @@
       </nav>
     </header>
     <article class="top">
-        <section class="c-hero">
-            <img src="img/header-logo.svg" alt="ヘッダーロゴ">
-            <p class="c-hero--txt">はじめまして。RaiseTech（レイズテック）は<br>
-                最速で「稼げる」エンジニアになるための、<br>
-                実践的なWebエンジニアリングスクールです
-            </p>
-            <p class="c-hero--btn"><a href="#">マンガでわかるRaiseTech</a></p>
-        </section>
+        <section class="c-hero"><!-- トップページの画像部分 -->
+			<div class="c-hero__inner"><!-- トップページのボタン部分 -->
+				<img src="img/header-logo.svg" class="c-hero--img" alt="ヘッダーロゴ">
+				<p class="c-hero--txt">はじめまして。RaiseTech（レイズテック）は<br>
+					最速で「稼げる」エンジニアになるための、<br>
+					実践的なWebエンジニアリングスクールです
+				</p>
+				<p class="c-hero--btn"><a href="#">マンガでわかるRaiseTech</a></p>
+			</div>
+		</section><!-- 3つの円の所 -->
         <section class="teach">
             <div class="p-teach">
                 <img src="" alt="">
