@@ -43,6 +43,10 @@
 	margin-top: -235px;
 }
 
+section[class="c-hero__inner"] {
+	display: none;
+}
+
 /*トップページのボタン部分の中*/
 .c-hero--img, .c-hero--txt, .c-hero--btn {
 	margin: 0 auto; /*子要素を中央寄せにする*/
@@ -125,7 +129,95 @@
 	color: #fff;
 }
 
-/*メディアクエリ（タブレット）*/
-@media screen and (max-width:1190px) {
+/*メディアクエリ（SP版）*/
+@media screen and (max-width:750px) {
 
+	/*トップページの画像部分*/
+	.c-hero {
+		background-size: 750px 170px;
+	}
+
+	/*トップページのボタン部分のラッパーのラッパー*/
+	.c-hero--img__inner2 {
+		height: 100%;
+		background-size: 750px 170px;
+		background-position: center center;
+	}
+
+	/*トップページのボタン部分のラッパー*/
+	.c-hero--img__inner {
+		height: 100%;
+		background-size: 750px 170px;
+		background-position: center center;
+	}
+
+	/*トップページのボタン部分*/
+	div[class="c-hero__inner"] {
+		display: none;
+	}
+
+	section[class="c-hero__inner"] {
+		display: block;
+		border-radius: 0;
+		width: 100%;
+		height: 28%;
+		text-align: center;
+	}
+
+	/*トップページのボタン部分の中の画像*/
+	.c-hero--img {
+		display: none;
+	}
+
+	/*トップページのボタン部分の中の文章*/
+	.c-hero--txt {
+		font-size: 13px;
+		line-height: 20.8px;
+	}
+
+	/*トップページのボタン部分の中ボタンのラッパー*/
+	.c-hero--btn {
+		padding: 20px 0;
+	}
+	/*トップページのボタン部分の中のボタン*/
+	.c-hero--btn > a {
+		padding: 10px 20px;
+		border-radius: 5px;
+		font-size: 16px;
+	}
+
+
+	/*トップページの下の部分をteachとする。
+	teach全体*/
+	.teach {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: #121212;
+		padding-bottom: 50px;
+		padding-top: 60px;
+	}
+
+	/*teach内の3つの部分の各１つの設定*/
+	.p-teach {
+		padding-right: 50px;
+		padding-left: 50px;
+		margin: 0;
+		padding-bottom: 50px
+	}
+
+	/*teachの中のアイコンのラッパー*/
+	.p-teach--icon {
+		margin: 0 auto;
+	}
+
+	/*teach中のアイコンの文章の改行*/
+	.c-teach--txt {
+		line-height: 28px;
+	}
+
+	/*teach中のアイコンの文章の改行*/
+	.c-teach--txt__break {
+		display: none;
+	}
 }

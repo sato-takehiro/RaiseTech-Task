@@ -37,6 +37,7 @@
 /*ここからハンバーガーメニュー*/
 .hamburger-menu {
 	display: none;
+	position: relative;
 }
 
 :root {
@@ -132,7 +133,7 @@
 
 /*ドロップダウンメニュー*/
 .p-nav > ul > li {
-	height: 70px
+	height: 70px;
 	transition: .5s;
 }
 
@@ -218,5 +219,32 @@
 	/*ナビゲーションバー*/
 	.p-nav {
 		display: none;
+		position: absolute;
+		top: 50px;
+		background-color: #fff;
+		width: 100%;
 	}
+
+	/*ナビゲーションバー*/
+	.p-nav__inner {
+		display: block;
+	}
+
+
+	/*メニュー（受講お申込み）*/
+	.c-nav--apply {
+		display: none;
+	}
+
+	/*ドロップダウンメニューの子要素(ホバー時)の中にあるリンクタグ*/
+	.p-nav li > ul  a, .p-nav ul > li > a {
+		padding: 15px 10px;
+	}
+
+	/*ドロップダウンメニューの子要素全体*/
+	.p-nav li > ul {
+		position: relative;
+		top: 0;
+	}
+
 }
