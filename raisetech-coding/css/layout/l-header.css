@@ -116,8 +116,9 @@
 }
 
 /*メニュー(ホバー時)の中にあるリンクタグ*/
-.p-nav > ul > li:nth-child(-n+4):hover > a {
-	background-color: #D4F1F8;
+.p-nav > ul > li:nth-child(-n+4) > a:hover {
+    background-color: #D4F1F8;
+    transition: .2s;
 }
 
 /*ドロップダウンメニュー*/
@@ -128,6 +129,10 @@
 /*ドロップダウンメニュー＋－ボタン*/
 .c-nav--btn {
 	display: none;
+}
+
+.c-subnav--beginners:last-child {
+	margin-bottom: -16px;
 }
 
 /*メニュー（受講お申込み）の中にあるリンクタグ*/
@@ -155,15 +160,26 @@
 	left: 0px;
 }
 
+/*ドロップダウンメニューの子要素全体
+.p-nav li ul {
+	display: none;
+}
+
+/*ドロップダウンメニューの子要素全体(ホバー時)
+.p-nav li:hover ul {
+	display: block;
+}
+*/
+
 /*ドロップダウンメニューの子要素*/
-.p-nav li > ul > li {
+.p-nav li ul li {
 	height: 0;
 	overflow: hidden;
-	transition: .3s;
+	transition: .2s;
 }
 
 /*ドロップダウンメニュー(ホバー時)の子要素*/
-.p-nav li:hover > ul > li {
+.p-nav li:hover  ul  li {
 	height: 50px;
 	overflow: visible;
 	word-break: keep-all;
@@ -180,7 +196,7 @@
 /*ドロップダウンメニューの子要素(ホバー時)の中にあるリンクタグ*/
 .p-nav li > ul  a {
 	color: #4a546a;
-	transition: .5s;
+	transition: .2s;
 }
 
 .p-nav li:hover > ul > li:hover > a {
@@ -233,12 +249,19 @@
 	/*ナビゲーションバー*/
 	.p-nav__inner {
 		display: block;
+		position: relative;
+		z-index: 100;
+	}
+
+	.p-nav__inner, .p-nav__inner > li a, .p-nav__inner > li > ul > li a {
+		position: relative;
+		z-index: 100;
 	}
 
 	/*ドロップダウンメニュー*/
 	.p-nav .c-nav--beginners > a, .p-nav .c-nav--course > a, .p-nav .c-nav--support > a {
 		display: inline-block;
-		width: calc(100% - 50px);
+		width: calc(100% - 53px);
 	}
 
 	/*ドロップダウンメニュー＋－ボタン*/
@@ -247,6 +270,16 @@
 		display: inline-block;
 		border-top: solid 2px;
 		width: 25px;
+	}
+
+	.p-nav__inner .c-nav--btn:nth-of-type(1) {
+		margin-left: 10px;
+		margin-bottom: 5px;
+	}
+
+	.c-nav--course .c-nav--btn:nth-of-type(1),.c-nav--support .c-nav--btn:nth-of-type(1) {
+		margin-left: -6px;
+		margin-bottom: 4px
 	}
 
 	/*ドロップダウンメニュー＋－ボタンのボタン部分*/
@@ -266,13 +299,27 @@
 
 	/*ドロップダウンメニュー*/
 	.p-nav > ul > li {
-		height: 45px;
+		height: auto;
+	}
+
+	.p-nav li > ul >li > a {
+		padding-left: 25px;
+	}
+
+	.c-nav--btn {
+		height: auto;
 	}
 
 	/*ドロップダウンメニュー(ホバー時)*/
 	.p-nav > ul > li:hover {
 		background-color: #C3C3C3;
 	}
+
+	.p-nav > ul > li:nth-child(-n+4) > a {
+		background-color: #fff;
+	}
+
+
 
 	/*ドロップダウンメニュー(ホバー時)の＋－ボタン*/
 	.p-nav > ul > li:hover .c-nav--btn::after {
@@ -290,4 +337,12 @@
 		top: 0;
 	}
 
+	.p-nav li:hover > ul > li > a {
+		background-color: #fff;
+	}
+
+	.p-nav li:hover > ul > li:hover > a {
+		color: #4a546a;
+		background-color: #cdeff7;
+	}
 }
