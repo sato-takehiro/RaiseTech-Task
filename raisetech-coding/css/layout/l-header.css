@@ -178,6 +178,10 @@
 	transition: .2s;
 }
 
+.p-nav li:hover ul li {
+	overflow: visible;
+}
+
 /*ドロップダウンメニュー(ホバー時)の子要素*/
 .p-nav li:hover  ul  li {
 	height: 50px;
@@ -319,7 +323,11 @@
 		background-color: #fff;
 	}
 
-
+	.p-nav > ul {
+		overflow: hidden;
+		transition: .2s;
+		height: 0;
+	}
 
 	/*ドロップダウンメニュー(ホバー時)の＋－ボタン*/
 	.p-nav > ul > li:hover .c-nav--btn::after {
