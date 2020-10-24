@@ -40,7 +40,8 @@
 	width: 415px;
 	height:325px;
 	text-align: center;
-	margin-top: -235px;
+	margin-bottom: 25px;
+	margin-top: -280px;
 }
 
 section[class="c-hero__inner"] {
@@ -135,6 +136,8 @@ section[class="c-hero__inner"] {
 	/*トップページの画像部分*/
 	.c-hero {
 		background-size: 750px 170px;
+		background-position: center 50px;
+		margin-top: -282px;
 	}
 
 	/*トップページのボタン部分のラッパーのラッパー*/
@@ -162,6 +165,7 @@ section[class="c-hero__inner"] {
 		width: 100%;
 		height: 28%;
 		text-align: center;
+		padding-top: 25px;
 	}
 
 	/*トップページのボタン部分の中の画像*/
